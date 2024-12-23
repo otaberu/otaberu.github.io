@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Otaberu',
-  tagline: 'Robot management, reimagined',
+  title: 'Robot Agent',
+  tagline: 'Scalable peer-to-peer network for edge devices',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -67,12 +67,17 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [{
+      name: 'keywords', 
+      content: 'robotics, p2p, libp2p, edge devices, CI/CD, robot network, otaberu'
+    }],
+    
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/robot-agent-social-card.png',
     navbar: {
-      title: 'Otaberu',
+      title: 'otaberu',
       logo: {
-        alt: 'Otaberu Logo',
+        alt: 'Robot Agent Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -91,7 +96,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Docs',
@@ -116,13 +121,36 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Otaberu Robot Agent`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'description',
+        content: 'Robot-agent is an open-source dev tool to setup scalable peer-to-peer network for edge devices and manage data and CI/CD pipelines over it.',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'og:description',
+        content: 'Robot-agent is an open-source dev tool to setup scalable peer-to-peer network for edge devices and manage data and CI/CD pipelines over it.',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:description',
+        content: 'Robot-agent is an open-source dev tool to setup scalable peer-to-peer network for edge devices and manage data and CI/CD pipelines over it.',
+      },
+    },
+  ],
 };
 
 export default config;
