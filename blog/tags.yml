@@ -1,0 +1,9 @@
+development:
+  label: Development
+  permalink: /development
+  description: Development tag description
+
+agent:
+  label: Agent
+  permalink: /agent
+  description: Agent tag description

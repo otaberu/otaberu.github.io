@@ -1,0 +1,125 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Primary brand colors */
+  --ifm-color-primary: #4a5b8c;
+  --ifm-color-primary-dark: #3f4d77;
+  --ifm-color-primary-darker: #394671;
+  --ifm-color-primary-darkest: #2d375c;
+  --ifm-color-primary-light: #5569a1;
+  --ifm-color-primary-lighter: #6275ad;
+  --ifm-color-primary-lightest: #7887b9;
+  
+  /* Core background colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f5f6f7;
+  
+  /* Text colors */
+  --ifm-font-color-base: #1c1e21;
+  --ifm-heading-color: #000000;
+  
+  /* Component-specific colors */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f5f6f7;
+  --ifm-code-background: #f0f1f2;
+  --ifm-code-color: #1c1e21;
+  
+  /* Table colors */
+  --ifm-table-stripe-background: #f5f6f7;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #1a1f2e;
+  --ifm-background-surface-color: #242937;
+}
+
+/* Custom component styles */
+.footer {
+  --ifm-footer-background-color: #f5f6f7;
+  --ifm-footer-color: #1c1e21;
+  --ifm-footer-link-color: #4a5b8c;
+  --ifm-footer-title-color: #000000;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer__link-item {
+  color: var(--ifm-footer-link-color);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: #666666;
+}
+
+.footer__title {
+  color: var(--ifm-footer-title-color);
+  font-weight: 600;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Section backgrounds */
+.features {
+  background-color: #ffffff;
+}
+
+.demoSection {
+  background-color: #f5f6f7;
+}
+
+.useCases {
+  background-color: #ffffff;
+}
+
+/* Section divider */
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  margin: 0;
+  padding: 0;
+}
+
+/* Button styles */
+.button {
+  background-color: #4a5b8c;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #5569a1;
+}
+
+/* Search box */
+.navbar__search-input {
+  background-color: #f5f6f7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}

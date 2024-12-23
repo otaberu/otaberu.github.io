@@ -1,0 +1,29 @@
+.useCases {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    width: 100%;
+  }
+  
+  .useCasesHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+  }
+  
+  .useCasesHeader h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .useCaseEmoji {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    line-height: 1;
+  }
+  
+  .useCaseEmoji:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }

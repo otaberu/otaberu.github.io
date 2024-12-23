@@ -1,0 +1,19 @@
+alex:
+  name: Alex Smekhnov
+  title: Developer
+  url: https://github.com/smehnov
+  image_url: https://avatars.githubusercontent.com/smehnov
+  page: true
+  socials:
+    x: asmehnov
+    github: smehnov
+
+arseniy:
+  name: Arseniy Popov
+  title: Developer
+  url: https://github.com/greatestParrot
+  image_url: https://avatars.githubusercontent.com/greatestParrot
+  page: true
+  socials:
+    x: GreatestParrot
+    github: greatestParrot
