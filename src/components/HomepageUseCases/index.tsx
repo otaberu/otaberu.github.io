@@ -4,33 +4,49 @@ import styles from './styles.module.css';
 
 type UseCaseItem = {
   title: string;
-  description: string;
-  icon: string;
+  description: JSX.Element;
+  emoji: string;
 };
 
 const UseCaseList: UseCaseItem[] = [
   {
     title: 'CI/CD for Robots',
-    description: 'Seamlessly integrate robots into your CI/CD pipeline with just a few lines of code in your existing build workflows',
-    icon: '🔄',
+    description: (
+      <>
+        Seamlessly integrate robots into your CI/CD pipeline with just a few lines of code in your existing build workflows
+      </>
+    ),
+    emoji: '🔄',
   },
   {
     title: 'Device Discovery',
-    description: 'Enable automatic device discovery and message exchange between robots, eliminating the need for static IPs or manual network scanning',
-    icon: '🔍',
+    description: (
+      <>
+        Enable automatic device discovery and message exchange between robots, eliminating the need for static IPs or manual network scanning
+      </>
+    ),
+    emoji: '🔍',
   },
   {
     title: 'Remote Lab Access',
-    description: 'Create dynamic access control lists for remote robotics labs, allowing secure access to sensor data and sandboxed program execution',
-    icon: '🔬',
+    description: (
+      <>
+        Create dynamic access control lists for remote robotics labs, allowing secure access to sensor data and sandboxed program execution
+      </>
+    ),
+    emoji: '🔬',
   },
 ];
 
-function UseCase({title, description, icon}: UseCaseItem) {
+function UseCase({title, description, emoji}: UseCaseItem) {
   return (
     <div className={clsx('col col--4')}>
+      <div className="text--center">
+        <span className={styles.useCaseEmoji} role="img" aria-label={title}>
+          {emoji}
+        </span>
+      </div>
       <div className="text--center padding-horiz--md">
-        <div className={styles.useCaseIcon}>{icon}</div>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>

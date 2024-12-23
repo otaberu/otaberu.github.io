@@ -66,7 +66,8 @@
 }
 
 .navbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #4a5b8c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card {
@@ -122,4 +123,38 @@
 .navbar__search-input {
   background-color: #f5f6f7;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Specific selectors for the navbar title */
+.navbar__title,
+a.navbar__title,
+.navbar__brand .navbar__title {
+  color: #ffffff !important; /* Using !important to override any existing styles */
+}
+
+/* Style for the entire navbar brand area */
+.navbar__brand {
+  color: #ffffff;
+}
+
+/* Hover states */
+.navbar__title:hover,
+a.navbar__title:hover,
+.navbar__brand:hover .navbar__title {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Navbar background and other elements */
+.navbar {
+  background-color: #4a5b8c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #ffffff;
 }

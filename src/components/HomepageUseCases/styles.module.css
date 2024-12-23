@@ -18,9 +18,8 @@
   
   .useCaseEmoji {
     font-size: 5rem;
-    margin-bottom: 1.5rem;
-    display: block;
-    line-height: 1;
+    padding: 1.5rem;
+    display: inline-block;
   }
   
   .useCaseEmoji:hover {
