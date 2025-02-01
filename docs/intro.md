@@ -22,7 +22,7 @@ And make executable:
 `chmod +x robot-agent`  
 
 ## Install rn-cli
-`pip3 install rn-cli --upgrade`  
+`pipx install rn-cli`  
 
 ## Create owner key
 We create a keypair for an organization owner. Public key will be place to all agents while startup. Secret key is used to sign messages for the Robot Network.  
