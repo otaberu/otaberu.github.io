@@ -37,8 +37,8 @@ To continue, let's set `USER_KEY_PATH` environment variable that contains path t
 `export USER_KEY_PATH=owner.key`  
 
 ## Create configuration for robots network
-To publish config, you should firstly run agent on your machine and set path to socket(same folder as an agent by default).  
-`export AGENT_SOCKET_PATH=rn.socket`  
+To publish config, you should firstly run agent on your machine and set path to it's RPC node (you could use another port).  
+`export AGENT_RPC=ws://localhost:8888`  
 
 We use cli's TUI to configure a list of robots:  
 `rn tui config robots.yaml`  
@@ -51,8 +51,9 @@ Then we click "Add robot" to generate key and set info:
 
 **Save Private Key, it will be used to start agent on a device. If you have problem to select a text, try holding shift or option key**  
 
-To publish config, you should firstly run agent(add new robot without publishing yet) on your machine and set path to socket(same folder as an agent by default).  
-`export AGENT_SOCKET_PATH=rn.socket`  
+To publish config, you should firstly run agent(add new robot without publishing yet) on your machine.
+Run agent locally in another terminal window:
+`./robot-agent --owner <OWNER_PUBLIC_KEY> --secret-key <ROBOT_SECRET_KEY> --rpc 127.0.0.1:8888`  ` 
 
 After adding all robots, press key `p` or click on 'publish config' in footer  
 
@@ -63,13 +64,16 @@ To start agent use:
 
 | Argument               | Description                            | Default   |
 | ---------------------- | -------------------------------------- | --------- |
-| --socket-filename (-s) | path to create unix socket             | rn.socket |
+| --rpc                  | address where to start rpc node        | rn.socket |
 | --key-filename (-k)    | path to save secret key                | rn.key    |
 | --port-libp2p (-l)     | port to use as libp2p node             | 8765      |
 | --bootstrap-addr (-b)  | multiaddress of bootstrap node         |           |
 | --secret-key (-s)      | secret key in base64 to use on startup |           |
 | --owner (-0)           | base64 public key of the owner         |           |
 
+RPC node used as a way to communicate between any representative of agent's network and rn-cli. You don't need to run it on your every agent.
+
+Bootstarp node could serve as a fast way to connect your agent's for the first time. For example, if you run second agent and your first agent is located at 212.168.0.9 and runned with libp2p port 8765, you can pass `-b /ip4/212.168.0.9/tcp/8765`
 ## Next Steps
 Now that you have your Robot Agent running, you can:
 
